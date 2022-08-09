@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "pupeteer": "^0.0.1",
+    "timesnap": "^0.3.3"
+  }
+}

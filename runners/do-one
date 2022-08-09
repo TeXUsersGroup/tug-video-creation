@@ -1,0 +1,7 @@
+
+if [ ! -d "$1" ] ; then
+  exit 0
+fi
+cd $1
+bash doit.sh missing 2>&1 | tee doit.log
+
