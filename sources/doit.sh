@@ -33,6 +33,29 @@ function watermarkscale() {
   fi
 }
 
+function audiochange() {
+  fn=$1
+  fieldsstr=$(ffprobe -v error -hide_banner -select_streams a -show_entries stream=codec_name,sample_rate,channels,channel_layout -of compact=p=0:nk=1 "$fn")
+  IFS='|' read -a fields <<< "$fieldsstr"
+  codec_name=${fields[0]}
+  sample_rate=${fields[1]}
+  channels=${fields[2]}
+  channel_layout=${fields[3]}
+  # default target options are
+  # -ar $audio_sample_rate -ac 2 -acodec $audio_codec
+  rec=""
+  if [ ! "$sample_rate" = $audio_sample_rate ] ; then
+    rec="$rec -ar $audio_sample_rate "
+  fi
+  if [ ! "$channels" = $audio_channels ] ; then
+    rec="$rec -ac $audio_channels "
+  fi
+  if [ ! "$codec_name" = "$audio_codec" ] ; then
+    rec="$rec -acodec $audio_codec "
+  fi
+  echo "$rec"
+}
+
 prepare_one() {
   inputf=$1
   startts=$2
@@ -52,11 +75,11 @@ prepare_one() {
   if [ $doall = 1 ] ; then rm -f $outputfile $midfile normalized/$midfile ; fi
   if [ ! -r $midfile ] ; then
     echo "segment $nextpart: extracting and rescaling/watermarking"
-    $ffmpeg $startarg $endarg -i "$inputf" -i $TUGFILE -filter_complex "$(watermarkscale $inputf)" $midfile
+    $ffmpeg $startarg $endarg -i "$inputf" -i $TUGFILE -filter_complex "$(watermarkscale $inputf)" $(audiochange $inputf) $midfile
   fi
   if [ ! -r normalized/$midfile ] ; then
     echo "segment $nextpart: normalizing audio"
-    ffmpeg-normalize -ext mp4 -c:a aac -f -ar 32000 $midfile
+    ffmpeg-normalize -ext mp4 -c:a $audio_codec -f -ar $audio_sample_rate $midfile
   fi
   if [ ! -r $outputfile ] ; then
     echo "segment $nextpart: preparing for concatenation"
@@ -74,7 +97,7 @@ if [ $doall = 1 ] ; then rm -f part${nextpart}.ts ; fi
 if [ ! -r part${nextpart}.ts ] ; then
   # add audio stream to leader
   echo "adding audio to leader"
-  $ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=32000 -i $LEADER -c copy -bsf:v h264_mp4toannexb -f mpegts -c:a aac -shortest part${nextpart}.ts
+  $ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=$audio_sample_rate -i $LEADER -c copy -bsf:v h264_mp4toannexb -f mpegts -c:a $audio_codec -shortest part${nextpart}.ts
 fi
 nextpart=$((nextpart + 1))
 
@@ -90,7 +113,7 @@ if [ $doall = 1 ] ; then rm -f part${nextpart}.ts ; fi
 if [ ! -r part${nextpart}.ts ] ; then
   # add audio stream to leader
   echo "adding audio to credits"
-  $ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=32000 -i $CREDITS -c copy -bsf:v h264_mp4toannexb -f mpegts -c:a aac -shortest part${nextpart}.ts
+  $ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=$audio_sample_rate -i $CREDITS -c copy -bsf:v h264_mp4toannexb -f mpegts -c:a $audio_codec -shortest part${nextpart}.ts
 fi
 nextpart=$((nextpart + 1))
 
