@@ -1,9 +1,9 @@
 SLUG="cereda-silly"
 PART1FILE_NAME="GMT20220722-140823_Recording_gallery_3686x2304.mp4"
 # with the copyrighted sequence
-PRERECORDED_NAME="Paulo_Cereda-The-story-of-a-silly-package.m4v"
+#PRERECORDED_NAME="Paulo_Cereda-The-story-of-a-silly-package.m4v"
 # without the copyrighted sequence
-#PRERECORDED_NAME="silly-talk-tug-2022.m4v"
+PRERECORDED_NAME="silly-talk-tug-2022.m4v"
 PART3FILE_NAME="GMT20220722-140823_Recording_gallery_3686x2304.mp4"
 PART1START="3:22:20"
 PART1END="3:23:14"
