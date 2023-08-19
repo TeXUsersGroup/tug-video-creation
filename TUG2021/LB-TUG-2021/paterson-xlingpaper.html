@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+<link rel="stylesheet" href="leader-board.css">
+</head>
+
+<body>
+<div class="boxImage">
+  <div id="box" class="box">
+    <img class="logo trans" src="img/logo-tug-user-group-wh.png" alt="TUG User Group logo" />
+  	<h1>TUG 2021</h1>
+  	<hr>
+  	<h2 class="ml3">Andy Black &amp; Hugh Paterson</h2>
+  	<p>XLingPaper’s use of TeX Technologies</p>
+  	<div class="date">
+        Aug. 8, 2021
+    </div>
+  </div>
+</div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 1500,
+    easing: "easeOutExpo",
+    delay: 15000
+  });
+        </script>
+<script type="text/javascript" src="title-cards.js"></script>
+</html>
+
