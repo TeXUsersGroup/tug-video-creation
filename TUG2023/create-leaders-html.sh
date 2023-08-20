@@ -3,7 +3,7 @@
 mkdir -p LB
 
 # token,Lecturer,Title,ZoomRecording,LogoPosition,Part 1 Start,Part 1 End,PreRecordedFileName,Part 3 Start,Part 3 End,Comment,Timing by,Double checked by
-while IFS=, read -r token lecturer title zoomfile foobar part1start part1end prerec part3start part3end comment rest ; do
+while IFS=\# read -r token lecturer title zoomfile foobar part1start part1end prerec part3start part3end comment rest ; do
   #echo -e "token=$token\nzoomfile=$zoomfile\nstart1=$part1start\nprerec=$prerec"
   if [ -z "$token" ] ; then
     echo "Missing token for line"
@@ -29,9 +29,15 @@ while IFS=, read -r token lecturer title zoomfile foobar part1start part1end pre
   PART3START="$part3start"
   PART3END="$part3end"
   #
-  foo=${PART1FILE#GMT}
-  foo=${foo%-*}
-  ds=`date -d$foo +"%b. %d, 2023"`
+  if [[ "$PART1FILE" == *_Day_1_* ]] ; then
+    ds="15. July, 2023"
+  elif [[ "$PART1FILE" == *_Day_2_* ]] ; then
+    ds="16. July, 2023"
+  elif [[ "$PART1FILE" == *_Day_3* ]] ; then
+    ds="17. July, 2023"
+  else
+    ds="UNKNOWN"
+  fi
   if [ -r "LB/$token.html" ] ; then
     echo "Renaming old LB $token.html to $token.previous.html in LB directory."
     mv "LB/$token.html" "LB/$token.previous.html"
@@ -44,4 +50,4 @@ while IFS=, read -r token lecturer title zoomfile foobar part1start part1end pre
 done < "TUG Meetings Video Data Sheet - 2023.csv"
 
 
-# :set tabstop=2 shiftwidth=2 expandtab
+# vim:set tabstop=2 shiftwidth=2 expandtab: #

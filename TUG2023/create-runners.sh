@@ -3,7 +3,7 @@
 mkdir -p runners
 
 # token,Lecturer,Title,ZoomRecording,LogoPosition,Part 1 Start,Part 1 End,PreRecordedFileName,Part 3 Start,Part 3 End,Comment,Timing by,Double checked by
-while IFS=, read -r token lecturer title zoomfile foobar part1start part1end prerec part3start part3end comment rest ; do
+while IFS=\# read -r token lecturer title zoomfile foobar part1start part1end prerec part3start part3end comment rest ; do
   #echo -e "token=$token\nzoomfile=$zoomfile\nstart1=$part1start\nprerec=$prerec"
   if [ -z "$token" ] ; then
     echo "Missing token for line"
