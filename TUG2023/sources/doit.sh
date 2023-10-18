@@ -61,7 +61,8 @@ prepare_one() {
   startts=$2
   endts=$3
   midfile=part${nextpart}-pre.mp4
-  outputfile=part${nextpart}.ts
+  #outputfile=part${nextpart}.ts
+  outputfile=part${nextpart}.mp4
   if [ $startts = "-1" -o $startts = "BEGIN" ] ; then
     startarg=""
   else
@@ -75,7 +76,7 @@ prepare_one() {
   if [ $doall = 1 ] ; then rm -f $outputfile $midfile normalized/$midfile ; fi
   if [ ! -r $midfile ] ; then
     echo "segment $nextpart: extracting and rescaling/watermarking"
-    $ffmpeg $startarg $endarg -i "$inputf" -i $TUGFILE -filter_complex "$(watermarkscale $inputf)" $(audiochange $inputf) $midfile
+    $ffmpeg $startarg $endarg -i "$inputf" -i $TUGFILE -filter_complex "$(watermarkscale $inputf)" $(audiochange $inputf) -avoid_negative_ts make_zero  -r 25 $midfile
   fi
   if [ ! -r normalized/$midfile ] ; then
     echo "segment $nextpart: normalizing audio"
@@ -83,7 +84,8 @@ prepare_one() {
   fi
   if [ ! -r $outputfile ] ; then
     echo "segment $nextpart: preparing for concatenation"
-    $ffmpeg -i normalized/$midfile -c copy -bsf:v h264_mp4toannexb -f mpegts $outputfile
+    #$ffmpeg -i normalized/$midfile -c copy -bsf:v h264_mp4toannexb -f mpegts -video_track_timescale 12800 $outputfile
+    $ffmpeg -i normalized/$midfile -c copy -video_track_timescale 12800 $outputfile
   fi
   nextpart=$((nextpart + 1))
 }
@@ -93,11 +95,13 @@ echo "========================== working on $SLUG"
 
 nextpart=0
 
-if [ $doall = 1 ] ; then rm -f part${nextpart}.ts ; fi
-if [ ! -r part${nextpart}.ts ] ; then
+if [ $doall = 1 ] ; then rm -f part${nextpart}.mp4 ; fi
+if [ ! -r part${nextpart}.mp4 ] ; then
   # add audio stream to leader
   echo "adding audio to leader"
-  $ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=$audio_sample_rate -i $LEADER -c copy -bsf:v h264_mp4toannexb -f mpegts -c:a $audio_codec -shortest part${nextpart}.ts
+  #$ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=$audio_sample_rate -i $LEADER -c copy -bsf:v h264_mp4toannexb -f mpegts -c:a $audio_codec -shortest part${nextpart}.ts
+  $ffmpeg -y -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=$audio_sample_rate -i $LEADER -c copy -c:a $audio_codec -shortest -video_track_timescale 12800  part${nextpart}.mp4
+  #$ffmpeg -y -i part${nextpart}.ts -c copy -bsf:a aac_adtstoasc -video_track_timescale 12800  part${nextpart}.mp4
 fi
 nextpart=$((nextpart + 1))
 
@@ -109,19 +113,12 @@ if [ -n "$PART3FILE_NAME" -a -n "$PART3START" -a -n "$PART3END" ] ; then
   prepare_one "$PART3FILE" "$PART3START" "$PART3END"
 fi
 
-if [ $doall = 1 ] ; then rm -f part${nextpart}.ts ; fi
-if [ ! -r part${nextpart}.ts ] ; then
-  # add audio stream to leader
-  echo "adding audio to credits"
-  $ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=$audio_sample_rate -i $CREDITS -c copy -bsf:v h264_mp4toannexb -f mpegts -c:a $audio_codec -shortest part${nextpart}.ts
-fi
-nextpart=$((nextpart + 1))
-
 acc=""
-for i in part?.ts ; do
-  if [ -n "$acc" ] ; then acc="$acc|" ; fi
-  acc="${acc}$i"
+rm -f concat.txt
+touch concat.txt
+for i in part?.mp4 ; do
+  echo "file '$i'" >> concat.txt
 done
 echo "concatenating parts"
-$ffmpeg -y -i "concat:$acc" -c copy -bsf:a aac_adtstoasc ${SLUG}-final.mp4
+$ffmpeg -y -f concat -i concat.txt -c copy ${SLUG}-final.mp4
 
