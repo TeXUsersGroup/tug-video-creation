@@ -76,7 +76,7 @@ prepare_one() {
   if [ $doall = 1 ] ; then rm -f $outputfile $midfile normalized/$midfile ; fi
   if [ ! -r $midfile ] ; then
     echo "segment $nextpart: extracting and rescaling/watermarking"
-    $ffmpeg $startarg $endarg -i "$inputf" -i $TUGFILE -filter_complex "$(watermarkscale $inputf)" $(audiochange $inputf) -avoid_negative_ts make_zero  -r 25 $midfile
+    $ffmpeg $startarg $endarg -i "$inputf" -i $TUGFILE -filter_complex "$(watermarkscale $inputf)" $(audiochange $inputf) -avoid_negative_ts make_zero -r 50 $midfile
   fi
   if [ ! -r normalized/$midfile ] ; then
     echo "segment $nextpart: normalizing audio"
