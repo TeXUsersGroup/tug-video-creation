@@ -1,0 +1,91 @@
+doall=1
+if [ "$1" = "missing" ] ; then
+  doall=0
+fi
+
+set -u
+
+. ../../common-video-settings.sh
+
+if [ ! -r config ] ; then
+  echo "Missing config file" >&2
+  exit 1
+fi
+
+. config
+
+ZOOMDIR="../../Zoom"
+PRERECDIR="../../prerecorded"
+LEADER="../../leaders/$SLUG.mp4"
+PART1FILE="$ZOOMDIR/$PART1FILE_NAME"
+PART3FILE="$ZOOMDIR/$PART3FILE_NAME"
+TUGFILE="../../TUG-33.png"
+PRERECORDED="$PRERECDIR/$PRERECORDED_NAME"
+
+function watermarkscale() {
+  fn=$1
+  xdim=$(ffprobe -v error -select_streams v:0 -show_entries stream=width -of csv=s=x:p=0 $fn)
+  if [ $xdim -eq 1920 ] ; then
+    echo "$watermark"
+  else
+    echo "$scalewatermark"
+  fi
+}
+
+prepare_one() {
+  counter=$1
+  inputf=$2
+  startts=$3
+  endts=$4
+  midfile=part${counter}-pre.mp4
+  outputfile=part${counter}.ts
+  if [ $startts = "-1" ] ; then
+    startarg=""
+    endarg=""
+  else
+    startarg="-ss $startts"
+    endarg="-to $endts"
+  fi
+  if [ $doall = 1 ] ; then rm -f $outputfile $midfile normalized/$midfile ; fi
+  if [ ! -r $midfile ] ; then
+    echo "segment $counter: extracting and rescaling/watermarking"
+    $ffmpeg $startarg $endarg -i "$inputf" -i $TUGFILE -filter_complex "$(watermarkscale $inputf)" $midfile
+  fi
+  if [ ! -r normalized/$midfile ] ; then
+    echo "segment $counter: normalizing audio"
+    ffmpeg-normalize -ext mp4 -c:a aac -f -ar 32000 $midfile
+  fi
+  if [ ! -r $outputfile ] ; then
+    echo "segment $counter: preparing for concatenation"
+    $ffmpeg -i normalized/$midfile -c copy -bsf:v h264_mp4toannexb -f mpegts $outputfile
+  fi
+  parts=$((parts + 1))
+}
+
+
+echo "== working on $SLUG"
+
+if [ $doall = 1 ] ; then rm -f part0.ts ; fi
+if [ ! -r part0.ts ] ; then
+  # add audio stream to leader
+  echo "adding audio to leader"
+  $ffmpeg -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=32000 -i $LEADER -c copy -bsf:v h264_mp4toannexb -f mpegts -c:a aac -shortest part0.ts
+fi
+
+parts=0
+prepare_one 1 "$PART1FILE" "$PART1START" "$PART1END"
+if [ -n "$PRERECORDED_NAME" ] ; then
+  prepare_one 2 "$PRERECORDED" "-1" "-1"
+fi
+if [ -n "$PART3FILE_NAME" -a -n "$PART3START" -a -n "$PART3END" ] ; then
+  prepare_one 3 "$PART3FILE" "$PART3START" "$PART3END"
+fi
+
+acc=""
+for i in part?.ts ; do
+  if [ -n "$acc" ] ; then acc="$acc|" ; fi
+  acc="${acc}$i"
+done
+echo "concatenating parts"
+$ffmpeg -y -i "concat:$acc" -c copy -bsf:a aac_adtstoasc ${SLUG}-final.mp4
+
