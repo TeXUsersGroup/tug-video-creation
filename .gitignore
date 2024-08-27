@@ -1,4 +1,5 @@
 timesnap/node_modules
+timesnap/package-lock.json
 TUG2021/Final/*.mp4
 TUG2021/Speakers-TUG-2021/*.mkv
 TUG2021/Speakers-TUG-2021/*.mp4
@@ -13,3 +14,4 @@ TUG2022/sources/credits-screencapture.mp4
 */prerecorded/
 */Zoom/
 */CREDITS/
+TUG2023/leaders-25fps
