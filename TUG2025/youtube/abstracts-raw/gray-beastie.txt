@@ -1,0 +1,36 @@
+{Norman Gray}
+{Beastie: A new (and the old) language for \BibTeX\ databases}
+{\BibTeX\ has been very nearly finished for some decades, now. I would like
+to offer some points for discussion, and a modest alternative, before it
+gets~there.
+
+Though \BibTeX\ databases and style files are pervasive in many technical
+disciplines, the system has some points of discomfort. (i)~It is rather
+loosely documented, with some features described as being `like Scribe'
+(a system which is now principally famous for being the thing that
+\BibTeX\ is not); (ii)~the (unnamed) implementation language for style
+files could most politely be described as `esoteric' (even amongst those
+of us who regard \TeX's syntax as perfectly normal); (iii)~processing
+\texttt{.bib} databases with targets other than \TeX\ is possible, but could
+never be said to be elegant or natural (see~(ii)); and (iv)~to the
+extent that \BibTeX\ is Unicode-aware (or at least Unicode-comfortable) it
+is largely by accident.
+
+I describe Beastie, a program which can parse and manipulate
+\texttt{.bib} files, and which, as a proof of functionality, includes an
+implementation of the \texttt{.bst} language\Dash that is, it can
+function as a drop-in replacement for the \texttt{bibtex} program.
+Beastie has explored the edges of \BibTeX's syntax, and I have some
+views on what we find there; it supports Scheme as an implementation
+language (the \texttt{.bst} support is just a Scheme program); while
+\LaTeX\ output remains easy of course, it is intended to be just as easy
+to support output as, for example, \HTML\ or \SQL; and it is
+Unicode-aware throughout.
+
+Beastie is not intended to be quite `bug-compatible' with
+\texttt{bibtex}, but to be largely indistinguishable from it in `normal'
+use, as well as supporting some simple extensions to the set of
+\texttt{.bst} primitive functions and \texttt{.bib} structures. There is
+of course an implied definition of `normal' there, which I intend to
+discuss, and which I hope will provoke a discussion about what a future
+normative \BibTeX\ might look like.}

@@ -1,0 +1,3 @@
+{Ulrike Fischer}
+{Status of the \LaTeX\ Tagged \PDF\ project, 2025: Tagging of math}
+{}

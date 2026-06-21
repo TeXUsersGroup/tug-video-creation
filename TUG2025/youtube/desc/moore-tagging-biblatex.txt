@@ -1,0 +1,7 @@
+An important task when implementing `tagging' of a PDF using LaTeX is to determine exactly where within the processing extra coding is needed, marking the beginning and end of text snippets which have special meaning. With LaTeX environments there are special `hooks' which allow the semantic meaning of the environment's contents to be captured within the structure tree. But when the content is more highly structured, as in a bibliographic entry, it is necessary to delve more deeply into the macros doing the processing, to capture the semantic meanings of text snippets for author(s), title, journal name, publication year, and often many more fields.
+
+In this (online) talk we show how tagging can be used to associate bibliographic field names with the corresponding visible text, in particular for multiple bibliographies generated using biblatex and biber for a collection of related reports, as separate sections within a single PDF document. We identify a few places where a `hook' can be placed; but the main technique is to use locally modified versions of some internal macros to do much of the required extra work. That is, just using a `hook' is not sufficient; in particular, for capturing the punctation and any space character between fields. The example PDF can be downloaded from the author's site:
+
+https://web.science.mq.edu.au/ ross/TaggedPDF/ FallMT2023/FallMT2023-taggedBibs.pdf web.science.mq.edu.au/ ross/TaggedPDF/
+
+FallMT2023/FallMT2023-taggedBibs.pdf

@@ -1,0 +1,7 @@
+Static analysis tools are invaluable for catching bugs early and improving code quality. However, the highly dynamic nature of TeX has long posed a barrier to static analysis.
+
+Expl3 is a high-level programming layer built on top of TeX. Originally developed to simplify the LaTeX kernel, it is now widely used by package authors across LaTeX and other TeX formats. While it retains much of TeX's flexibility, real-world expl3 code tends to follow more predictable patterns, making it far more amenable to static analysis.
+
+In this talk, I introduce expltools—a long-overdue addition to the expl3 programmer's toolbox. Designed to support semantic analysis, it brings clarity and structure to a domain traditionally resistant to static tooling. I present the current state of the project, focusing on its design, practical usage, and validation on real-world expl3 packages.
+
+A current work-in-progress version of the article is available at github.com/witiko/expltools-tug25-paper.

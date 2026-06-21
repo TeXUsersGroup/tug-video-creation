@@ -1,0 +1,1 @@
+The world of LaTeX has evolved over the years with technology advancements and integrations. And yet, the struggle remains for a large community of non-TeX users in converting a structured LaTeX document into MS Word for any reason, and this remains a major pain point in any workflow. Introducing emDoX, our in-house solution that addresses this challenge.

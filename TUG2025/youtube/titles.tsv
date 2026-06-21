@@ -1,0 +1,12 @@
+# Per-token YouTube title overrides (full title, <=100 chars).
+# Used verbatim by upload.py; one  token<TAB>title  per line.
+# These are the talks whose auto-built title exceeded YouTube's 100-char limit,
+# hand-shortened (author list and/or title) the way the 2024 channel did.
+schrauwen-keynote	TUG 2025 — Rob Schrauwen — Keynote: True but irrelevant: 25 years of content standards
+moore-tagging-biblatex	TUG 2025 — Ross Moore — Tagging highly-structured information: bibliographies in biblatex
+salil-niranjan-tables	TUG 2025 — Salil B., Niranjan — Symbols for constructing and comprehending tables
+venkatesan-scripts	TUG 2025 — S.K. Venkatesan — Alphabetic vs logo-syllabic script: form versus content
+rishikesan-xml-tagged	TUG 2025 — Rishikesan Nair, et al — Efficiently managing XML documents with tagged PDF
+nijenhuis-xdp	TUG 2025 — Erik Nijenhuis — Modular document engineering with XDP
+behrendt-latex-village	TUG 2025 — Doris Behrendt — The LaTeX Village at the Chaos Communication Camp
+rahul-neptune-tagged	TUG 2025 — Rahul Krishnan S, et al — Implementing tagged and accessible PDF in Neptune

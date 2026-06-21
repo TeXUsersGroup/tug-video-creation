@@ -1,0 +1,17 @@
+---------------------------
+Linguistics with LinguisTiX
+TUG 2025 - v0.1
+---------------------------
+
+LinguisTiX is a bundle that provides extensive support for
+things required in the discipline of linguistics. There are
+quite a few packages for this, but some of them have a
+strange syntax and some of them are simply inefficient. This
+bundle aims at providing a standard syntax and an efficient,
+customisable interface. It has a pure LaTeX3 backend that is
+useful for programmers. It provides packages for typesetting
+IPA, interlinear glossing and glossaries that are commonly
+needed in linguistics literature. It also provides packages
+for some generally desirable enhancements. It is developed
+completely using LaTeX3. This talk explains and demonstrates
+the facets of LinguisTiX.

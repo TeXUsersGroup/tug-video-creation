@@ -1,0 +1,8 @@
+{Vrajar\=aja Govinda}
+{How we use \XeLaTeX\ at our ashram}
+{We, at International Society for Krishna Consciousness
+(\acro{ISKCON}) in Belagavi, have been using \XeLaTeX\ primarily for
+publishing spiritual literature, prayer sheets, slideshows, weekly
+planners and making a monthly lecture schedule\Dash all multilingual.
+I'll explain how we managed to get them done and how the separation of
+form and content made our job easier.}

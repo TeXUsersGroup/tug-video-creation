@@ -1,0 +1,7 @@
+Rob Schrauwen has been involved with Elsevier's content processing and markup standards for more than a quarter of a century. In this talk he looks back to the implementation of an XML-first workflow 25 years ago and discusses if this delivered on its promises. Some of the questions that were discussed in the 1990s [1] are to an extent still being asked.
+
+Also there is increasingly a debate about `what's next?', suggesting it is time for moving away from XML—a debate that has many parallels with the transition from SGML to XML in the early 2000s, when the benefits that were touted for XML were in fact already benefits of SGML and the real motivation for change lay elsewhere. He discusses if we should move away and if so then to what?
+
+[1] Sebastian Rahtz, Another look at LaTeX to SGML conversion, TUGboat 16:3 (1995), 315–324,
+
+tug.org/TUGboat/tb16-3/tb48raht.pdf

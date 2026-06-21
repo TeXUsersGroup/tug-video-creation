@@ -1,0 +1,26 @@
+{Erik Nijenhuis}
+{Modular document engineering with \xdp: From templates to intertwined \PDF{}s}
+{In this talk, I will present Xerdi's Documentation Proj\-ect (\xdp)
+\Dash a modular framework for managing \LaTeX-based document
+production at scale. \xdp\ introduces structured components such as
+\textit{Executable Document Templates} (\acro{EDT}s), \textit{Document
+Portfolios}, \textit{Workspaces}, and \textit{Data Definition
+Repositories}, which together enable a clean separation of template
+logic, content, and configuration.
+
+Using this architecture, we'll explore how \LaTeX\ users can
+organize their projects using native features like \texttt{TEXMFHOME}
+and \texttt{TEXMFDOTDIR}, making it easy to reuse and extend document
+workflows across teams or clients.
+
+As a practical demonstration, I'll show how to generate
+intertwined documents using \texttt{bib2gls}, \texttt{attachfile2} and
+\texttt{hyperref}. This technique can be immediately applied in use
+cases such as invoices, reports, or academic materials, and is
+accessible to both advanced users and document authors with minimal
+coding experience.
+
+Participants will leave with practical tools and insights to better
+structure their \LaTeX\ projects\Dash and extend them on their own.
+%\def\xdp{X{\kern -.05em \raise-.1em\hbox{D}}\kern -.05em P}%
+}

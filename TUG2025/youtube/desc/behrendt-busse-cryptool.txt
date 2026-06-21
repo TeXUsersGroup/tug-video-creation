@@ -1,0 +1,11 @@
+The CrypTool project with its long history uses LaTeX in two different scenarios: First, we use KaTeX for maths on our CrypTool online webpage. Second, we used LuaLaTeX for building the recently re-edited CrypTool book (in German [1] and English [2]).
+
+In this talk we limit ourselves to the topic of mathematical typesetting for interactive web applications in the browser with KaTeX.
+
+[1] B. Esslinger. Das CrypTKTool-Buch: Kryptografie lernen und anwenden mit CrypTKTool und SageMath. Lehmanns Media, Berlin, 2024.
+
+www.cryptool.org/de/ctbook
+
+[2] B. Esslinger. Learning and Experiencing Cryptography with CrypTKTool and SageMath. Artech House, Norwood, 2024.
+
+https://us.artechhouse.com/Learning-and-Experiencing-Cryptography-with-CrypTool-and-SageMath-P2378.aspx us.artechhouse.com/Learning-and-Experiencing-Cryptography-with-CrypTool-and-SageMath-P2378.aspx

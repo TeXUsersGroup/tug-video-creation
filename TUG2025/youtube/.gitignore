@@ -1,0 +1,4 @@
+# OAuth secrets / tokens -- never commit these
+client_secret.json
+token.json
+__pycache__/

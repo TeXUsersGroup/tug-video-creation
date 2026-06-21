@@ -1,0 +1,9 @@
+{Martin J. Osborne}
+{\code{text2bib}: Converting plain text references into \BibTeX\ format}
+{\code{text2bib} is an open-source software system that converts files of
+plain text references into \BibTeX\ files. It is implemented at
+\url{https://text2bib.org}. I will discuss the motivation for its
+creation, the uses to which it is put, the challenges in creating it,
+the structure of the code, and its possible future. The talk will
+include a demonstration of the system both as a user and as an
+administrator.}

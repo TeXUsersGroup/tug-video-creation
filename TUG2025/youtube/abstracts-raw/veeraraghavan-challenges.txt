@@ -1,0 +1,44 @@
+{Veeraraghavan Balasubramanian}
+{Challenges faced by the publishing industry}
+{The presentation explores the operational challenges faced by the
+publishing industry in managing the end-to-end workflow from manuscript
+submission to final content delivery across multiple platforms. With the
+increasing volume and complexity of scholarly and technical content\Dash
+much of which is authored using \LaTeX\Dash publishers worldwide must
+navigate a complex ecosystem involving diverse stakeholders, evolving technologies,
+and varied content formats.
+
+Key challenges include integrating \LaTeX\ manuscripts into \XML-first and
+multi-format workflows, accurately converting complex mathematical
+notations, tables, and figures, and ensuring high-quality typesetting
+and formatting for print and digital outputs (\PDF, \HTML, ePub). The
+presentation highlights operational hurdles such as coordinating peer
+review, copyediting, and production processes while maintaining the
+fidelity of original \LaTeX\ source files and meeting tight publication
+timelines.
+
+A critical and growing area of concern is accessibility. Publishers must
+ensure that all content complies with accessibility standards such as
+\acro{WCAG} (Web Content Accessibility Guidelines) to serve readers with
+disabilities. This includes making complex scientific content\Dash including
+equations, figures, and tables\Dash navigable and interpretable by screen
+readers and other assistive technologies. Converting \LaTeX-based
+technical manuscripts into accessible formats poses unique challenges,
+requiring specialized tagging, alternative text descriptions, and
+semantic markup. Balancing accessibility compliance with preserving the
+scientific accuracy and visual integrity of content is an ongoing
+operational challenge for publishers and their suppliers.\looseness-1
+
+Additionally, the presentation addresses supply\| chain and print
+production logistics, metadata management, rights and licensing
+complexities, and distribution across global digital platforms.
+Real-world examples, including the surge in scientific publishing during
+global events like the \acro{COVID-19} pandemic, illustrate how publishers
+balance quality, speed, accessibility, and market demands.
+
+Attendees will gain insights into best practices and emerging strategies
+for workflow optimization, automation of \LaTeX\ processing, and effective
+collaboration between authors, suppliers, and publishers. This knowledge
+is essential for \LaTeX\ authors and service providers seeking to improve
+efficiency, quality, and accessibility within the fast-evolving global
+publishing landscape.}

@@ -1,0 +1,11 @@
+Copy-editing a paper requires back and forth exchange between the authors and editors. The traditional way to do convey editorial notes to the authors is margin notes. In this talk I describe the macros for editorial comments I developed over the years for several journal I have been consulting.
+
+There are several requirements for editorial comments:
+
+1. We need a layered system allowing a dialog between the editor(s) and author(s). The editor(s) should be able to switch on or off any layer.
+
+2. In the production mode all comments should be switched off.
+
+3. The comments should not affect line or page breaking.
+
+The third requirement precludes the use of LaTeX marginpar mechanism, since it influences the output routine. In the current implementation we use zref to put comments in zero size picture environment on the margin and an elaborate system for switching on and off the comments either completely or for a selected layer.

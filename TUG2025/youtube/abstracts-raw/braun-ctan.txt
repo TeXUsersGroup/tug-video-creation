@@ -1,0 +1,6 @@
+{Erik Braun}
+{The state of \CTAN: 2025}
+{\CTAN\ is the source for \TeX\ distributions and the place where \TeX\
+packages are kept to reach a wide range of users, which requires a lot
+of manual work. This talk gives an overview of the current software,
+hardware and people.}

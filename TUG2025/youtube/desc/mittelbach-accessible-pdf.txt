@@ -1,0 +1,5 @@
+In this talk we will listen together to read-outs of typical constructs found in PDFs (generated with LaTeX or otherwise) so that participants can get some first-hand experience of what we all have inflicted on readers with reading disabilities during the last thirty years. Documents with more complex content such as mathematical formula, tables, etc. are especially troublesome; but even fairly simple documents can cause the heuristics, as used in today's software, to fail in horrifying ways.
+
+We then discuss how much better the results could and should be and how far we already get in this respect with the current implementation provided by the LaTeX Tagged PDF project.
+
+An important aspect of this new software is that it works without any manual post-processing of the PDF—i.e., the accessibility is achieved fully automatically by just compiling the LaTeX source as usual.

@@ -1,0 +1,11 @@
+{Salil B, Niranjan}
+{Symbols to improve the processes of construction and comprehension of tables}
+{While constructing a table, the elements in a column (or a row) are
+ordered. However, no symbol is used to explicitly state the presence of
+the order. A set of symbols is proposed for the same. The same
+facilitates an efficient, easy, and clear comprehension of a table. The
+set of proposed symbols makes the process of construction of a table
+academically sound and relatively less prone to errors. Thus, the set of
+symbols help both the processes: construction and comprehension of a
+table. The set of proposed symbols is not necessarily comprehensive or
+complete\Dash it is open for addition and modification.}

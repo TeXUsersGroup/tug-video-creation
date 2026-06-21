@@ -1,0 +1,17 @@
+{Rishi T, Apu V, Rajagopal CV}
+{Efficiently managing \XML\ documents with \TeX{} and tagged \PDF\ enabled}
+{In the journal publishing world, the \XML-first workflow has long been
+the de facto standard. This approach ensures that the source for
+generating final deliverables is always an \XML\ document. For journal
+publishing, these deliverables typically include client
+\XML\slash\MathML, web version \PDF{}s, print version \PDF{}s, and
+alternate images for \MathML, among others.
+
+While there are numerous solutions available for generating these
+outputs from \XML, creating a high-quality \PDF\ with an aesthetically
+pleasing layout remains a challenge. Achieving a refined and
+well\hyph paginated \PDF\ cannot be accomplished solely through automation.
+What's essential is an interactive interface that allows users to
+manually refine pagination and design elements, ensuring the final \PDF\
+is visually appealing and professionally formatted. In this talk we will
+be discussing how we can accomplish this with the help of \TeX{}.}

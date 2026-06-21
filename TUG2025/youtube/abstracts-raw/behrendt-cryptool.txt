@@ -1,0 +1,28 @@
+{Doris Behrendt, Bernd Busse}
+{How we use \AllTeX\ in the CrypTool project}
+{The CrypTool project with its long history uses \LaTeX\ 
+in two different scenarios: First, we use \KaTeX\ for maths on our
+CrypTool online webpage. Second, we used \LuaLaTeX\ for building the
+recently re-edited CrypTool book (in German [1] and English
+[2]).
+
+In this talk we limit
+ourselves to the topic of mathematical typesetting for
+interactive web applications in the browser with \KaTeX.
+
+\vskip2pt
+\hanging \noindent \def\tk{\kern-.04em }
+[1] B. Esslinger. \textit{Das Cryp\tk Tool-Buch: \hbox{Kryptografie} lernen
+und anwenden mit Cryp\tk Tool und \hbox{SageMath}}. Lehmanns Media, Berlin, 2024.
+\\\tbsurl{www.cryptool.org/de/ctbook}
+
+\vskip2pt
+\hanging \noindent
+[2] B. Esslinger. \textit{Learning and Experiencing Cryptography
+with Cryp\tk Tool and SageMath.} Artech House, Norwood, 2024.
+\\\tbhref{https://us.artechhouse.com/Learning-and-Experiencing-Cryptography-with-CrypTool-and-SageMath-P2378.aspx}
+         {\tt us.artechhouse.com/Learning-and-\\%
+              Experiencing-Cryptography-with-CrypTool-\\%
+              and-SageMath-P2378.aspx}
+
+\preprint}
