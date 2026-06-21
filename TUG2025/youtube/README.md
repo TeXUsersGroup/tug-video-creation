@@ -19,6 +19,7 @@ matching the TUG 2024 convention:
 | `abstracts-raw/` | verbatim downloaded abstracts (reference) |
 | `upload.py` | uploads each final video via the API, with title + description |
 | `set-metadata.py` | sets title + description on videos uploaded **in the browser** |
+| `set-thumbnails.py` | sets each video's thumbnail to its leader image `../leaders/<token>.jpg` |
 | `make-playlist.py` | adds all the talks to a playlist **in program order** |
 | `ytcommon.py` | shared helpers (titles, descriptions, auth, matching, playlists) |
 | `titles.tsv` | *optional* per-token title overrides (one `token<TAB>title` per line) |
@@ -93,10 +94,14 @@ python3 set-metadata.py --dry-run
 python3 set-metadata.py
 #    (or, to also publish at the same time:  python3 set-metadata.py --privacy public)
 
-# 4. preview the playlist order (conference-program order)
+# 4. set each video's thumbnail to its leader/title-card image
+python3 set-thumbnails.py --dry-run
+python3 set-thumbnails.py
+
+# 5. preview the playlist order (conference-program order)
 python3 make-playlist.py --title "TUG 2025" --dry-run
 
-# 5. create the "TUG 2025" playlist and add every talk in program order
+# 6. create the "TUG 2025" playlist and add every talk in program order
 python3 make-playlist.py --title "TUG 2025"
 ```
 
@@ -167,6 +172,10 @@ or request a quota increase from Google for a single-day batch.
 
 ## Notes
 
+- **Thumbnails** come from `../leaders/<token>.jpg` (the title-card still made by
+  `create-leaders-mp4.sh`). Setting custom thumbnails requires the channel to be
+  enabled for them (verify a phone number once in YouTube Studio); otherwise
+  `thumbnails.set` returns a "forbidden"/not-enabled error.
 - `veytsman-opening` and `fischer-tagging25` have no abstract on tug.org, so
   their description is empty (the Opening had none; Fischer's abstract field is
   blank on the source). Add text by hand in `desc/<token>.txt` if wanted.

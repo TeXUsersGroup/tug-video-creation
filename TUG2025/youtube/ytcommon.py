@@ -9,6 +9,7 @@ import json, os, re
 HERE   = os.path.dirname(os.path.abspath(__file__))
 ROOT   = os.path.dirname(HERE)                       # the TUG2025 dir
 CSV    = os.path.join(ROOT, "TUG Meetings Video Data Sheet - 2025.csv")
+LEADERS = os.path.join(ROOT, "leaders")              # title-card stills <token>.jpg
 DESC   = os.path.join(HERE, "desc")
 STATE  = os.path.join(HERE, "uploaded.json")
 SECRET = os.path.join(HERE, "client_secret.json")
@@ -86,6 +87,20 @@ def read_desc(token):
         with open(p, encoding="utf-8") as f:
             return f.read().strip()
     return ""
+
+
+def thumb_path(token):
+    """Path to the leader/title-card still used as the YouTube thumbnail."""
+    return os.path.join(LEADERS, token + ".jpg")
+
+
+def set_thumbnail(yt, video_id, image_path):
+    """Upload a custom thumbnail (the leader image) for a video. ~50 units.
+    Requires the channel to be enabled for custom thumbnails."""
+    from googleapiclient.http import MediaFileUpload
+    yt.thumbnails().set(
+        videoId=video_id,
+        media_body=MediaFileUpload(image_path, mimetype="image/jpeg")).execute()
 
 
 def load_state():
