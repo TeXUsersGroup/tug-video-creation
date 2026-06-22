@@ -1,3 +1,5 @@
+Paper (TUGboat 46:2): https://tug.org/TUGboat/tb46-2/tb143gray-beastie.pdf
+
 BibTeX has been very nearly finished for some decades, now. I would like to offer some points for discussion, and a modest alternative, before it gets there.
 
 Though BibTeX databases and style files are pervasive in many technical disciplines, the system has some points of discomfort. (i) It is rather loosely documented, with some features described as being `like Scribe' (a system which is now principally famous for being the thing that BibTeX is not); (ii) the (unnamed) implementation language for style files could most politely be described as `esoteric' (even amongst those of us who regard TeX's syntax as perfectly normal); (iii) processing .bib databases with targets other than TeX is possible, but could never be said to be elegant or natural (see (ii)); and (iv) to the extent that BibTeX is Unicode-aware (or at least Unicode-comfortable) it is largely by accident.

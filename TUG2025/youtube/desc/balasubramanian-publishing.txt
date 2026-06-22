@@ -1,3 +1,5 @@
+Paper (TUGboat 46:2): https://tug.org/TUGboat/tb46-2/tb143balasubramanian-challenges.pdf
+
 The presentation explores the operational challenges faced by the publishing industry in managing the end-to-end workflow from manuscript submission to final content delivery across multiple platforms. With the increasing volume and complexity of scholarly and technical content— much of which is authored using LaTeX—publishers worldwide must navigate a complex ecosystem involving diverse stakeholders, evolving technologies, and varied content formats.
 
 Key challenges include integrating LaTeX manuscripts into XML-first and multi-format workflows, accurately converting complex mathematical notations, tables, and figures, and ensuring high-quality typesetting and formatting for print and digital outputs (PDF, HTML, ePub). The presentation highlights operational hurdles such as coordinating peer review, copyediting, and production processes while maintaining the fidelity of original LaTeX source files and meeting tight publication timelines.

@@ -19,6 +19,7 @@ import os, re, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = "https://tug.org/tug2025/abstracts"
+PAPERS_BASE = "https://tug.org/TUGboat/tb46-2"   # TUGboat 46:2 (TUG 2025 papers)
 RAW  = os.path.join(HERE, "abstracts-raw")
 DESC = os.path.join(HERE, "desc")
 
@@ -159,8 +160,37 @@ def clean(body):
     t = re.sub(r'\n{3,}', '\n\n', t)
     return t.strip()
 
+def load_tsv(name):
+    out = {}
+    p = os.path.join(HERE, name)
+    if os.path.exists(p):
+        with open(p) as f:
+            for line in f:
+                line = line.rstrip('\n')
+                if not line or line.startswith('#') or '\t' not in line:
+                    continue
+                k, v = line.split('\t', 1)
+                out[k.strip()] = v.strip()
+    return out
+
+
+def write_desc(token, desc, paper_pdf):
+    """Write desc/<token>.txt: a 'Paper:' link line on top (if any), then the
+    abstract."""
+    parts = []
+    if paper_pdf and paper_pdf != '-':
+        parts.append(f"Paper (TUGboat 46:2): {PAPERS_BASE}/{paper_pdf}")
+    if desc:
+        parts.append(desc)
+    text = "\n\n".join(parts)
+    with open(os.path.join(DESC, token + '.txt'), 'w') as f:
+        f.write(text + ('\n' if text else ''))
+    return text
+
+
 def main():
     os.makedirs(RAW, exist_ok=True); os.makedirs(DESC, exist_ok=True)
+    papers = load_tsv("papers.tsv")
     rows = []
     with open(os.path.join(HERE, "talks.tsv")) as f:
         for line in f:
@@ -170,16 +200,24 @@ def main():
             token, absname = line.split('\t')
             rows.append((token, absname.strip()))
     for token, absname in rows:
+        paper = papers.get(token, '-')
+        tag = "  +paper" if paper not in ('', '-') else ""
         if absname == '-':
-            open(os.path.join(DESC, token + '.txt'), 'w').close()
-            print(f"[ -- ] {token}: no abstract")
+            write_desc(token, '', paper)
+            print(f"[ -- ] {token}: no abstract{tag}")
             continue
         url = f"{BASE}/{absname}.txt"
         try:
             req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
             src = urllib.request.urlopen(req, timeout=30).read().decode('utf-8', 'replace')
         except Exception as e:
-            print(f"[FAIL] {token}: {url}: {e}"); continue
+            print(f"[FAIL] {token}: {url}: {e}")
+            # don't clobber an existing good description on a transient failure;
+            # only write a paper-only fallback if there is nothing there yet.
+            p = os.path.join(DESC, token + '.txt')
+            if not (os.path.exists(p) and os.path.getsize(p) > 0):
+                write_desc(token, '', paper)
+            continue
         with open(os.path.join(RAW, absname + '.txt'), 'w') as f:
             f.write(src)
         groups = top_groups(src)
@@ -191,9 +229,8 @@ def main():
             m = re.search(r'-{3,}\s*\n.*?\n-{3,}\s*\n+(.*)$', src, re.S)
             body = m.group(1) if m else src
         desc = clean(body)
-        with open(os.path.join(DESC, token + '.txt'), 'w') as f:
-            f.write(desc + ('\n' if desc else ''))
-        print(f"[ ok ] {token}  ({len(desc)} chars)  <- {absname}.txt")
+        text = write_desc(token, desc, paper)
+        print(f"[ ok ] {token}  ({len(text)} chars)  <- {absname}.txt{tag}")
     if unknown:
         print("\nMacros left as plain words (review desc/*.txt if any look wrong):")
         print("  " + ", ".join("\\" + u for u in sorted(unknown)))

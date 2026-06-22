@@ -6,7 +6,8 @@ matching the TUG 2024 convention:
 
 - **Title:** `TUG 2025 — <speaker> — <title>` (em-dash separators; trimmed to
   YouTube's 100-character limit).
-- **Description:** the talk's abstract, taken from
+- **Description:** a link to the talk's TUGboat 46:2 paper (when one exists) on
+  the first line, followed by the talk's abstract — taken from
   `https://tug.org/tug2025/abstracts/<name>.txt` and cleaned to plain text.
 
 ## Files
@@ -14,7 +15,8 @@ matching the TUG 2024 convention:
 | file | purpose |
 |------|---------|
 | `talks.tsv` | maps each runner `token` to its abstract name on tug.org |
-| `build-descriptions.py` | downloads + cleans abstracts → `desc/<token>.txt` |
+| `papers.tsv` | maps each `token` to its TUGboat 46:2 paper PDF (`-` if none) |
+| `build-descriptions.py` | downloads + cleans abstracts (+ paper link) → `desc/<token>.txt` |
 | `desc/<token>.txt` | the cleaned description for each talk (review/edit these) |
 | `abstracts-raw/` | verbatim downloaded abstracts (reference) |
 | `upload.py` | uploads each final video via the API, with title + description |
@@ -181,5 +183,9 @@ or request a quota increase from Google for a single-day batch.
   blank on the source). Add text by hand in `desc/<token>.txt` if wanted.
 - The abstract cleaning is best-effort de-TeXing. `build-descriptions.py` prints
   any LaTeX macro it didn't recognise so you can check those `desc/*.txt`.
+- **Paper links** come from `papers.tsv` (token → TUGboat 46:2 PDF). 17 talks have
+  a paper; the rest are `-`. If more papers are published later, add them there and
+  re-run `build-descriptions.py`. If videos are already uploaded, re-run
+  `set-metadata.py` afterwards to push the updated descriptions (it's idempotent).
 - Re-running `build-descriptions.py` overwrites `desc/*.txt`; if you hand-edit a
   description, keep a copy or edit after the final build.

@@ -1,3 +1,5 @@
+Paper (TUGboat 46:2): https://tug.org/TUGboat/tb46-2/tb143veytsman-comments.pdf
+
 Copy-editing a paper requires back and forth exchange between the authors and editors. The traditional way to do convey editorial notes to the authors is margin notes. In this talk I describe the macros for editorial comments I developed over the years for several journal I have been consulting.
 
 There are several requirements for editorial comments:

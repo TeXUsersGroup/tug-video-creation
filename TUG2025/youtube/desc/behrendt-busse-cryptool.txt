@@ -1,3 +1,5 @@
+Paper (TUGboat 46:2): https://tug.org/TUGboat/tb46-2/tb143behrendt-cryptool.pdf
+
 The CrypTool project with its long history uses LaTeX in two different scenarios: First, we use KaTeX for maths on our CrypTool online webpage. Second, we used LuaLaTeX for building the recently re-edited CrypTool book (in German [1] and English [2]).
 
 In this talk we limit ourselves to the topic of mathematical typesetting for interactive web applications in the browser with KaTeX.

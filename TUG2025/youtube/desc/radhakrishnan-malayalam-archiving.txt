@@ -1,3 +1,5 @@
+Paper (TUGboat 46:2): https://tug.org/TUGboat/tb46-2/tb143radhakrishnan-malayalam-archiving.pdf
+
 This presentation will detail a workflow that leverages TeX and associated tools to produce multiple outputs—including (i) TEI XML, (ii) HTML, (iii) print-ready PDF, and (iv) smartphone-optimized PDF—all from the same LaTeX-encoded source material in Malayalam, a language spoken in Kerala, India.
 
 For the past fourteen years, Sayahna Foundation, a non-profit, has used this workflow to archive heritage books encoded in TEI XML and to generate HTML and PDF versions for immediate user access. Initially, TeX4ht did not support Indic scripts, so we developed an alternative method to convert LaTeX content into other markup formats. Our approach involves typesetting the content to create a PDF output closely resembling a TEI XML document, then extracting the text to produce fully parsable XML output. The HTML version is then derived from these XML sources using a custom XSLT.

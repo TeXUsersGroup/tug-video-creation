@@ -1,1 +1,3 @@
+Paper (TUGboat 46:2): https://tug.org/TUGboat/tb46-2/tb143govinda-ashram.pdf
+
 We, at International Society for Krishna Consciousness (ISKCON) in Belagavi, have been using XeLaTeX primarily for publishing spiritual literature, prayer sheets, slideshows, weekly planners and making a monthly lecture schedule—all multilingual. I'll explain how we managed to get them done and how the separation of form and content made our job easier.

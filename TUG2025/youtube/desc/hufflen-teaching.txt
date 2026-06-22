@@ -1,1 +1,3 @@
+Paper (TUGboat 46:2): https://tug.org/TUGboat/tb46-2/tb143hufflen-teach.pdf
+
 We summarise several experiments of introducing LaTeX to different audiences of students: in Computer Science, Mathematics, Physics, Chemistry, Digital Editions. Each time we started from different requirements. We show what common points for all audiences may be emphasised and how we adapted to features of specific audiences.

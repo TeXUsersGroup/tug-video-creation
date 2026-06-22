@@ -1,3 +1,5 @@
+Paper (TUGboat 46:2): https://tug.org/TUGboat/tb46-2/tb143nijenhuis-doceng.pdf
+
 In this talk, I will present Xerdi's Documentation Project (XDP) —a modular framework for managing LaTeX-based document production at scale. XDP introduces structured components such as Executable Document Templates (EDTs), Document Portfolios, Workspaces, and Data Definition Repositories, which together enable a clean separation of template logic, content, and configuration.
 
 Using this architecture, we'll explore how LaTeX users can organize their projects using native features like TEXMFHOME and TEXMFDOTDIR, making it easy to reuse and extend document workflows across teams or clients.

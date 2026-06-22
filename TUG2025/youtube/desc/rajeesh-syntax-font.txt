@@ -1,1 +1,3 @@
+Paper (TUGboat 46:2): https://tug.org/TUGboat/tb46-2/tb143rajeesh-colorfont-syntax.pdf
+
 Syntax highlighting in text editors, HTML pages or typeset documents require specialized `rules' and addons (such as JavaScript libraries). OpenType gave programmability and colour to fonts, which could be leveraged/abused to create a font with built-in syntax highlighting for specific purposes/languages. Based on prior art, we present the development of a webfont that can highlight the syntax of TeX documents, on browser platforms that support COLRv1 OpenType feature.
