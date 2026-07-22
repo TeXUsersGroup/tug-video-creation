@@ -1,0 +1,13 @@
+# symlinks to external storage (the raw day recordings on the big disk)
+raw
+Zoom
+# generated working files are also covered by the repo-root .gitignore
+# (*/leaders/, */Zoom/, */prerecorded/, */runners/*/*.mp4, ...)
+
+# contact sheets produced by sheet.sh (scratch)
+sheets/
+
+# transient build artifacts (logs and per-run scratch)
+*.log
+runners/*/.status
+runners/*/concat.txt
