@@ -1,8 +1,17 @@
 SLUG="krishnan-tables"
-PART1FILE_NAME="TUG2026-DAY1.mkv"
+# The wrong video was streamed live during this talk, so the recording's slide
+# portion is unusable. Part 1 is therefore the CORRECT prerecorded talk video
+# (the one that should have been streamed). It lives in ../../prerecorded/ and
+# is reached here via a ZOOMDIR-relative path (doit.sh prefixes ../../Zoom/).
+# BEGIN..END => use the whole file.
+PART1FILE_NAME="../prerecorded/krishnan-tables.mp4"
 PRERECORDED_NAME=""
+# Part 3 is the live online discussion (speaker on camera) from the original
+# Day-1 recording, i.e. everything AFTER the dark title card that follows the
+# (wrongly streamed) video. Dark card ends at 00:41:53; discussion runs
+# 00:41:54 -> 00:45:31; the transition to the next talk starts at 00:45:32.
 PART3FILE_NAME="TUG2026-DAY1.mkv"
-PART1START="00:25:25.000"
-PART1END="00:45:35.000"
-PART3START=""
-PART3END=""
+PART1START="BEGIN"
+PART1END="END"
+PART3START="00:41:54.000"
+PART3END="00:45:32.000"
