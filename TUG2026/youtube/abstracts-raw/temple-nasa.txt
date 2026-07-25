@@ -1,0 +1,22 @@
+{River Temple}
+{From neurons to \acro{NASA}: A brief tour of the brain, font psychology, and implications in spaceflight missions}
+{Understanding how the brain reads and interprets visual cues sets the
+stage for exploring why typography matters, especially in environments
+where clarity and speed are of utmost importance. This presentation
+offers a brief tour of core neural systems involved in attention,
+pattern recognition, and reading, into the practical psychology of
+typefaces, and the implications therein which should be considered for
+those who are designing documents for end users in mind.
+
+In the specific instance offered in this presentation, astronauts rely
+on dense checklists, instrument panels, and digital readouts, often
+under stress, fatigue, or other physiologically demanding factors of the
+spaceflight experience. Small typographic choices such as font weight,
+x-height, line spacing, and symbol clarity can influence how quickly and
+accurately information is processed in micro\-gravity or emergency
+conditions.
+
+This presentation will lay a framework for the shared ground between
+neuroscience, typography, and aerospace design. The aim is to highlight
+promising intersections and open the door for future presentations that
+explore each area in greater depth.}

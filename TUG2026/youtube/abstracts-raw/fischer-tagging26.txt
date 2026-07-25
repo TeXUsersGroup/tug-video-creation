@@ -1,0 +1,3 @@
+{Ulrike Fischer}
+{News from the \LaTeX\ Tagged \PDF\ project: 2026}
+{Update on the tagged PDF support in \LaTeX.}

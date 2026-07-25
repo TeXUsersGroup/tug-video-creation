@@ -1,0 +1,13 @@
+{Frank Mittelbach}
+{Towards accessible document classes}
+{With a current \LaTeX\ it is now possible to automatically produce truly
+accessible \PDF{}s complying to the \PDFUA-2 standard.
+
+However, this capability comes, for now, at a price:
+only a, by now fairly large, subset of available packages can be used;
+and only a, still very small, number of document classes can be used.
+
+In this talk I take a look at what needs doing to update an existing
+document class to become accessible (or build a new one) and what the
+\LaTeX\ project team is working on to make this a painless exercise.
+}

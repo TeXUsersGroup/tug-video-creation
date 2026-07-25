@@ -1,0 +1,36 @@
+# token <TAB> TUGboat 47:2 paper PDF basename (under tug.org/TUGboat/tb47-2/)
+# "-" = no paper published yet. Fill in as the proceedings appear, then
+# re-run build-descriptions.py (and set-metadata.py to push the updates).
+adhiyaman-structure	-
+arora-engdoc	-
+asakura-jptex	-
+beeton-history	-
+bonnetsmueller-dante	-
+bowman-asymptote26	-
+desouza-detex	-
+erickson-accessibility	-
+fischer-tagging26	-
+gerrard-literate	-
+goulet-ctansubmit	-
+krishnan-tables	-
+lienhard-mitthesis	-
+lode-realtime	-
+metelka-utfpatgen	-
+miller-sshrc	-
+mittelbach-accessibleclasses	-
+nice-3dsimple	-
+nijenhuis-accessiblelists	-
+nijenhuis-exectemplates	-
+nijenhuis-opening	-
+nijenhuis-travels	-
+preining-arxiv-process	-
+preining-math-accessibility	-
+prescott-book-accessibility	-
+prescott-ltx-talk	-
+rajeesh-malayalam-archiving	-
+rishi-speed	-
+starynovotny-expl3tools	-
+starynovotny-markdown-abbrev	-
+stephan-humanities	-
+temple-nasa	-
+verna-lastline	-

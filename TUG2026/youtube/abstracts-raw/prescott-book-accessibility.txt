@@ -1,0 +1,10 @@
+{Tim Prescott}
+{Converting a \acro{PDF} textbook to be accessible}
+{A guideline in the United States requires that
+\acro{PDF}s created after April 2026 must be accessible to visually
+impaired users. We discuss how we updated a custom three-semester
+calculus book to be accessible, including what we did, the challenges we
+faced, how we verified accessibility, and what remains to be done. We
+also discuss necessary adaptations to satisfy a common accessibility
+checker available in several learning management systems (\acro{LMS}s).
+\preprint}

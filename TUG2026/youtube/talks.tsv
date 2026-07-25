@@ -1,0 +1,36 @@
+# token <TAB> abstract-name (tug.org/tug2026/abstracts/<name>.txt) ; "-" = no abstract
+# In 2026 the abstract file names equal the tokens, so this is an identity map
+# except for the talks that have no abstract on the site.
+adhiyaman-structure	adhiyaman-structure
+arora-engdoc	arora-engdoc
+asakura-jptex	asakura-jptex
+beeton-history	beeton-history
+bonnetsmueller-dante	-
+bowman-asymptote26	bowman-asymptote26
+desouza-detex	desouza-detex
+erickson-accessibility	erickson-accessibility
+fischer-tagging26	fischer-tagging26
+gerrard-literate	gerrard-literate
+goulet-ctansubmit	goulet-ctansubmit
+krishnan-tables	krishnan-tables
+lienhard-mitthesis	lienhard-mitthesis
+lode-realtime	lode-realtime
+metelka-utfpatgen	metelka-utfpatgen
+miller-sshrc	miller-sshrc
+mittelbach-accessibleclasses	mittelbach-accessibleclasses
+nice-3dsimple	nice-3dsimple
+nijenhuis-accessiblelists	nijenhuis-accessiblelists
+nijenhuis-exectemplates	nijenhuis-exectemplates
+nijenhuis-opening	-
+nijenhuis-travels	nijenhuis-travels
+preining-arxiv-process	preining-arxiv-process
+preining-math-accessibility	preining-math-accessibility
+prescott-book-accessibility	prescott-book-accessibility
+prescott-ltx-talk	prescott-ltx-talk
+rajeesh-malayalam-archiving	rajeesh-malayalam-archiving
+rishi-speed	rishi-speed
+starynovotny-expl3tools	starynovotny-expl3tools
+starynovotny-markdown-abbrev	starynovotny-markdown-abbrev
+stephan-humanities	stephan-humanities
+temple-nasa	temple-nasa
+verna-lastline	verna-lastline

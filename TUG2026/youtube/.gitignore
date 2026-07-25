@@ -1,0 +1,9 @@
+# OAuth secrets / tokens -- never commit these
+client_secret.json
+token.json
+__pycache__/
+# local Python virtualenv (created for running these scripts)
+.venv/
+venv/
+# resume state written by upload.py (per-machine)
+uploaded.json

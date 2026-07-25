@@ -1,0 +1,24 @@
+{Paulo Ney de Souza}
+{A family of strippers\Dash from regular expressions to the real deal}
+{Extracting plain text from a \LaTeX\ document is deceptively simple to
+describe and surprisingly hard to do correctly. This talk will present a
+family of `strippers' based on a variety of existing tools, from
+industrial-strength pseudo-parsers like \LaTeXML\ and Pandoc, through
+home-grown Perl and Python strippers, to a new approach that sidesteps
+the fundamental problem entirely by letting \TeX\ parse its own output.
+
+The new \texttt{stripper} \LuaLaTeX\ package hooks into \LuaTeX's
+node-list pipeline via \texttt{pre\char`_linebreak\char`_filter},
+reading fully-processed paragraph text after all macro expansion,
+language switching, and font-specific ligature formation have already
+taken place. The result is exact per-language text extraction, separated
+by \acro{BCP}-47 tags, with correct attribution under both Babel and
+Polyglossia, recovery of discretionary ligatures under both the Lua and
+HarfBuzz renderers, footnote extraction, and \BibLaTeX\ citation
+handling, all produced as a zero-overhead side effect of a single
+compilation.
+
+The companion \LaTeXML, LaTeX::TOM, TexSoup and Pandoc-based tools are
+also presented for cases where \TeX\ compilation is not available, using a
+three-stage Perl\slash Python pipeline with balanced-brace-aware
+pre\hyph filtering, a Lua math filter, and a language-marker post-processor.}

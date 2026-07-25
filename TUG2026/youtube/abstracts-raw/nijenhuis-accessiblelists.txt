@@ -1,0 +1,16 @@
+{Erik Nijenhuis}
+{Experimental lists and titling for \PDFUA-2 compliance}
+{As the author of the \texttt{regulatory} package, I initially overlooked
+accessibility concerns. I later discovered that common dependencies such
+as \texttt{enumitem} and \texttt{titlesec} prevent proper structural
+tagging, making compliance with \PDFUA-2\Dash and thus user-accessible
+documents\Dash unattainable.
+
+This talk explores recent developments from the \LaTeX\ Project, including
+\LaTeX-lab components and kernel-level mechanisms, to address these
+limitations. Although some features are still experimental, they already
+enable structure-aware lists and sectioning.
+
+Once these approaches mature, they will provide a viable path to making
+packages like \texttt{regulatory} fully accessible.
+\preprint}

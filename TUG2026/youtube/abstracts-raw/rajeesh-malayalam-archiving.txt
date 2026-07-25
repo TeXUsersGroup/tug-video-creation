@@ -1,0 +1,22 @@
+{Rajeesh KV, Radhakrishnan CV}
+{Digital archiving of Malayalam content \acro{II}}
+{This presentation is a sequel to the one with the same name made during
+\acro{TUG} 2025. The previous talk described an archival technique using
+\TeX, but without the help of \TeX4ht owing to its inability to process
+\tbUTF-8 content (then). Now that \TeX4ht can digest \tbUTF-8 content,
+we have revised the workflow making use of the newer capabilities that
+include math processing.
+
+In the revised workflow, we employ \TeX4ht to process the \TeX{} sources
+to generate an enriched \acro{HTML} output which in turn is used as
+the source to create \acro{XML} output. We adopted this deviation from the
+traditional procedure (\TeX{}$\longrightarrow$ \acro{XML} $\longrightarrow$
+\acro{HTML}) due to the practical consideration of using a volunteer
+workforce with lesser expertise in markup formats, who find it difficult to
+fix parser-generated errors while validating the \acro{XML} output by editing
+the \TeX{} sources.
+
+The current process splits the workload between the two categories of
+average volunteers and (scarcely available) expert ones, the latter being
+engaged solely for \XML\ production. The talk provides more information
+about the aforementioned workflow and related technologies.}

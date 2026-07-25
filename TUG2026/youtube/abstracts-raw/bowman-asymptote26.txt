@@ -1,0 +1,35 @@
+{John C. Bowman}
+{Asymptote: Past, present, and future}
+{Asymptote has undergone substantial evolution in recent years,
+spanning language enhancements, rendering backends, and web
+deployment. New language features\Dash including templated imports, the
+\texttt{using} and \texttt{autounravel} keywords\Dash have simplified coding.
+A collections library, contributed by Charles Staats, introduces
+hash maps, B-tree maps (which maintain sorted order), hash sets, sorted
+sets, and queues as templated modules, along with iterator utilities
+such as \texttt{zip} and \texttt{enumerate}. These are supported by
+language-level additions: user-defined structs can now be iterated with
+range-based for loops via an \texttt{operator iter} method, support
+bracket indexing through \texttt{operator[]} and \texttt{operator[=]},
+and benefit from native hashing of ints, strings, reals, and int arrays.
+Together, these features broaden the range of algorithms that can be
+expressed concisely in Asymptote.
+
+The Asy\GL\ library has made it straightforward to embed interactive
+\acro{3D} figures directly in \HTML, allowing Asymptote scenes,
+including Web\GL\ animations, to be displayed on tablets and phones.
+
+The rendering pipeline has seen major changes: the legacy
+Open\GL\ renderer is being superseded by a Vulkan port to support
+order-independent transparency across all major platforms, including
+\macOS. The upcoming migration from Web\GL\ to Web\GPU\ will bring that
+same order-independent transparency to web brows\-ers.
+
+Additional highlights include the Qt6 upgrade of the Xasy graphical
+front end, image-based lighting, B\'ezier triangle patches, a portable
+compressed \acro{V3D} file format that can be embedded in \PDF{}s, and a
+\acro{V3D}-aware plugin for Okular. We survey these developments,
+demonstrate live examples, and discuss what lies ahead for Asymptote as
+a vector graphics language designed to complement \TeX{} for technical
+illustration.
+}

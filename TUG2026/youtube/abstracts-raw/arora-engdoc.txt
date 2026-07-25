@@ -1,0 +1,16 @@
+{Pavneet Arora}
+{Transcription surface terraforming: Engineering~documentation~\programrlap{workflows}}
+{In engineering projects, the gap between \textit{as-designed} and 
+\textit{as-built} is taken as a given, and often dismissed out of hand.  
+Subsequent iterations of \textit{as-renovated} or \textit{as-bypassed} 
+lead to further divergence between \textit{state} and 
+\textit{documentation}, raising real risks to the maintenance of critical 
+infrastructure.  Audits bring those back into closer alignment.
+
+\textit{Transcription surfaces} offer convenient data capture methods during
+the audit process, and can act as primary inputs to initial documentation
+workflows.  Their utility expands further if they are then used as
+parameterized inputs into controls and automation software generation for
+managing this infrastructure.  As such, their value can subsequently be
+amortized even more as inputs for creating new end-user documentation.
+}

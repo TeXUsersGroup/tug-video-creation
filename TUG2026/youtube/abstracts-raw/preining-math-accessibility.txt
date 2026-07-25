@@ -1,0 +1,12 @@
+{Norbert Preining}
+{Web Accessibility in \acro{STEM}\Dash \MathML\ Core and math fonts on the~\programrlap{Web}}
+{Accessibility on the web has improved considerably over the last few years,
+with screen readers being able to read out pages without great mishaps
+and problems. But when it comes to mathematics and more generally \acro{STEM},
+the situation has only very recently started to change with the
+introduction of \MathML\ Core and its support in browsers.
+
+In this talk we present the basics of \MathML\ (Core), open source tools
+to create it, and look at open source fonts that can be used to render
+\MathML\ on the web.
+}

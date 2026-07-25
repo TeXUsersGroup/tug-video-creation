@@ -1,0 +1,9 @@
+For several millennia people have used visual clues to convey the logical structure of long texts. The use of red color for section heads can be traced to Egyptian papyri, and had been prominent in medieval books. The requirements of monochrome printing presses led to the use of font sizes, series and special fonts to mark chapters, sections and subsections. Human beings tend to easily infer the logical structure from them.
+
+Accessibility equipment, like screen readers, requires the logical structure to be explicitly specified in the document, e.g., in tagged PDFs. While LaTeX logical commands like \section, \subsection, etc., define the logical structure, some authors use visual clues like \Large or \scshape to mark up sections. This makes conversion of legacy documents with visual formatting to logical formatting an important task.
+
+We trained BERT and open source LLMs for this task. To train and test the models, we used a script to convert logically formatted papers from arXiv to visual formatting, different for each paper, but consistent throughout it. Then we asked the models to infer the logical structure of the paper and perform the inverse transformation.
+
+To our surprise, the initial results were quite inaccurate. While training improves the performance of models, it is still significantly lower than that of humans.
+
+Our hypothesis is that a problem might lie in the limited input window of the models. A human reader first compose a “bird's eye view” of the paper to learn the relation of its different parts. This view is lost in the linear reading. If this hypothesis is right, it provides important insights for accessibility and machine learning. First, the intuition of the authors of accessibility standards that prioritized logical structure for speech recognition devices may be right. Second, a comprehension of a paper by a computer model may require several runs through text with different levels of detail.

@@ -1,0 +1,1 @@
+A new package hits CTAN almost every two days, on average. Very few are accepted on the first upload. The reasons vary, but they are almost always addressed in the upload instructions and recommendations. Tune in if you don't want to RTFM: I'll guide you through the most frequent pitfalls, how to avoid them, and also how to make updates that live up to your good first impression.

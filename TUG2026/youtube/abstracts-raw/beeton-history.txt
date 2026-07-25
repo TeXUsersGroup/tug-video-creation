@@ -1,0 +1,5 @@
+{Barbara Beeton}
+{A (somewhat biased) history of \TeX\ and \acro{TUG}}
+{A discussion of \TeX\ and \acro{TUG} history, including profiles of
+several of \acro{TUG}'s past presidents.
+}

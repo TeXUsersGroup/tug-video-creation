@@ -1,0 +1,42 @@
+{Timothy Erickson, Aarush Bhat}
+{Visual impairment meets mathematics: Bypassing institutional inertia through code-based workflows}
+{While individuals with disabilities make up roughly 15\% of the general
+population, they represent fewer than 3\% of employed \STEM\ professionals.
+This staggering disparity is rarely due to a lack of capability, but rather
+a lack of accessible infrastructure. When visually impaired students
+encounter highly visual fields like mathematics and computing science, they
+are frequently met with a reactive ``retrofit'' model of accommodation: a
+scramble to translate complex non-linear materials at the last minute,
+placing an exhausting, hidden tax on the disabled student's time and
+cognitive energy.
+
+In this talk, we explore the two-year collaborative journey of a veteran
+Mathematics instructor and a blind Computing Science student at the
+University of Alberta as they bypassed institutional inertia to engineer a
+proactive, ``born accessible'' framework.
+
+We approach this systemic challenge from two intersecting perspectives.
+First, from the pedagogical side, we discuss the failures of traditional
+university remediation. We detail the necessary shift toward ``mind's eye''
+instructional vocalization, the use of tactile geometry tools, and why
+standardizing on write-once code formats is essential for equitable
+education.
+
+Second, from the student and engineering perspective, we examine the
+technical reality of surviving high-level \STEM. We highlight how
+code-based authoring\Dash specifically Markdown, \LaTeX, \ASCII\ Math,
+and \acro{JSON\slash YAML}\Dash serves as the ultimate equalizer. By
+treating visual layouts as structured data, blind students can
+completely bypass inaccessible \GUI\ software to programmatically
+generate complex mathematics and database diagrams.
+
+Finally, we look toward the frontier of accessibility. We will share
+insights from our ongoing testing of accessible \PDF{}s via Lua\TeX,
+alongside the current limitations of browser-based rendering. Furthermore,
+we tease how emerging automation and Large Language Models (\acro{LLM}s)
+can be safely leveraged to parse inaccessible visual ``eye candy'' into
+structured, semantic markup, establishing a vision for the future of
+automated spatial accessibility. Ultimately, we aim to demonstrate that
+with the right combination of pedagogical adaptation and \TeX-based
+workflows, post-secondary \STEM\ does not have to be a barrier for blind
+students.}

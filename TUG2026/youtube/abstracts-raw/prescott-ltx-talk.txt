@@ -1,0 +1,9 @@
+{Tim Prescott}
+{Creating accessible presentations with \texttt{ltx-talk}}
+{We discuss how to create accessible \acro{PDF} presentations
+using \texttt{ltx-talk}, which is similar to Beamer.
+We give several examples, including how to adapt common Beamer styles.
+We also discuss necessary adaptations
+to satisfy a common accessibility checker available in 
+several learning management systems (\acro{LMS}s).
+\preprint}

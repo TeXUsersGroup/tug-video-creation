@@ -1,0 +1,18 @@
+{Takuto Asakura}
+{Japanese \TeX\ in 2026: An outside-in perspective}
+{This talk offers a snapshot of the Japanese \TeX\ ecosystem in 2026,
+intended for an international audience. It covers what makes Japanese
+typesetting structurally different from Western typesetting, the two
+practical workflows in common use today (p\TeX\ variants and
+Lua\TeX-ja), and current challenges around technical debt, kernel-level
+evolution, and the tentative np\TeX\ concept.
+
+The motivation is to help bridge a persistent information gap. The
+recent \TUB\ overview by Berry, Chernoff, and Hef{}feron (2025,
+\url{https://tug.org/TUGboat/\\tb46-3/tb144berry-engines-formats.pdf}),
+for example, notes that the (e)(u)p\TeX\ engine ``remains very popular
+in the Japanese community, but is rarely used by others since
+English-language documentation is limited.'' This talk attempts to fill
+in some of that blank space, offered from the perspective of an observer
+of both the local Japanese and the global \TeX\ communities.
+}

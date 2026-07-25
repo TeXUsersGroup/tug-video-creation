@@ -1,0 +1,5 @@
+This presentation is a sequel to the one with the same name made during TUG 2025. The previous talk described an archival technique using TeX, but without the help of TeX4ht owing to its inability to process UTF-8 content (then). Now that TeX4ht can digest UTF-8 content, we have revised the workflow making use of the newer capabilities that include math processing.
+
+In the revised workflow, we employ TeX4ht to process the TeX sources to generate an enriched HTML output which in turn is used as the source to create XML output. We adopted this deviation from the traditional procedure (TeX → XML → HTML) due to the practical consideration of using a volunteer workforce with lesser expertise in markup formats, who find it difficult to fix parser-generated errors while validating the XML output by editing the TeX sources.
+
+The current process splits the workload between the two categories of average volunteers and (scarcely available) expert ones, the latter being engaged solely for XML production. The talk provides more information about the aforementioned workflow and related technologies.

@@ -1,0 +1,28 @@
+{Ond\v{r}ej Metelka, Petr Sojka}
+{\acro{UTF}patgen: Pattern generation without borders}
+{Word hyphenation is a foundational typographic technique required to eliminate
+uneven line spacing and visually disruptive text blocks. Typesetting
+systems like \TeX\ have long relied on Liang's pattern-based PatGen
+program to generate hierarchical pattern sets for this task. However,
+PatGen 2.4 enforces rigid architectural limitations, most notably
+restricting input dictionaries to 245 distinct characters, preventing
+native pattern generation for modern multilingual text pools or large
+scripts like Tamil.
+
+To address this, we present \acro{UTF}patgen, a new addition to the
+\TeX\ Live program suite designed as a drop-in, open-source replacement
+for PatGen. Written from scratch in the \acro{CWEB} literate programming
+system, \acro{UTF}patgen replaces fixed-capacity static arrays with
+dynamic memory allocation to eliminate constraints on dictionary sizes
+and hyphenation levels. Furthermore, by introducing a variable-length
+byte-indexing schema, it provides fully scalable support for
+\tbUTF-8-encoded input alphabets while maintaining strict backward
+compatibility at the interface level.
+
+We present the empirical results from stress testing \acro{UTF}patgen
+against the \texttt{hyph-bench} evaluation benchmark, offering a direct
+comparison of the time and memory efficiency of both programs.
+Ultimately, \acro{UTF}patgen provides the \TeX\ ecosystem a flexible,
+modern alternative capable of supporting complex script workflows and
+cross-language dialect experimentation.
+}

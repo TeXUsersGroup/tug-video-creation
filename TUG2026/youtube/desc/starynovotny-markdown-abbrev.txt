@@ -1,0 +1,3 @@
+In traditional TeX workflows, marking up abbreviations is both tedious and fragile: once an abbreviation is introduced, authors must revisit earlier text and also remember to apply the same markup throughout the remainder of the document. In practice, this often leads to inconsistencies, or to abbreviation markup being omitted altogether.
+
+This talk presents new support for abbreviations in the Markdown package for TeX, shifting abbreviation handling from a procedural to a more declarative model. Editors can predefine standard abbreviations, while authors mark up individual occurrences as needed; the package then ensures that these abbreviations, whether introduced by editors or authors, are formatted consistently throughout the document.

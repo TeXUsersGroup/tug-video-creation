@@ -1,0 +1,7 @@
+When Typst emerged as a modern alternative to LaTeX, offering real-time preview, simpler syntax, and browser-based editing, it raised an uncomfortable question for LaTeX-based publishing: why should authors endure compile cycles and complex toolchains when a modern alternative exists?
+
+Rather than switching, I set out to bring the same experience to LuaTeX itself. The result is texlode, a browser-based editor that typesets books with LuaTeX in real time. No compile button, no local installation, no LaTeX knowledge required, but full microtype experience at 1ms compile speed, beating Typst in all benchmarks.
+
+The project grew out of a decade of LaTeX publishing services working with dozens of clients, and my book How to Publish Your Book with LaTeX, which documents the complete self-publishing workflow using the LODE template. texlode turns that workflow into an interactive editor: authors import a Word, Markdown, or LaTeX manuscript; see it typeset live; generate covers; and publish to print-on-demand and e-book platforms from a single source.
+
+This talk demonstrates the editor and discusses what it took to make LuaTeX competitive with Typst as a real-time authoring experience while preserving the power of the TeX ecosystem.

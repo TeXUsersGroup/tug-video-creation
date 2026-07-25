@@ -1,0 +1,5 @@
+Static analysis tools are invaluable for catching bugs early and improving code quality. However, the highly dynamic nature of TeX has long posed a barrier to reliable static analysis.
+
+In this talk, I report on expltools, a static analysis tool for LaTeX3 that has been in development for nearly two years. I cover the features available today, the underlying algorithms that support them, the milestones toward a first stable release and beyond, and some of the reasons the project is taking longer than originally planned.
+
+In the broader context of debugging and code review, static analysis is increasingly being supplemented by large language models and agentic tools. I compare the strengths and limitations of these approaches and illustrate how they can complement each other in practice.

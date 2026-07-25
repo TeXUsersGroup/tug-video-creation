@@ -1,0 +1,26 @@
+{Norbert Preining}
+{arXiv processing: Preflight parsing and dockerized compiling}
+{At arXiv, we see a vast number of submissions of \LaTeX\ documents,
+of varying quality. Sometimes there are extra templates, appendices,
+old versions. On top of this, submissions are often incomplete
+with missing images, files, bibliographies, etc.
+
+Our preflight helps submitters by parsing the \TeX\ files in the
+submission, determining the top-level files, and searching for missing
+files that are included in one way or another.
+
+While it is super easy to trick, most importantly because we don't
+handle macros, it works surprisingly well with the type of documents
+submitted to arXiv. We'll discuss the process, output format, and future
+improvements.
+
+Beyond preflight, the documents need to be compiled. We have developed a
+dockerized version of \TeX\ Live which allows submitting files to a new
+\API\ and receiving as return value a tarball with the outcome, if
+compilation was successful, and a \JSON\ describing all steps taken.
+
+We support a variety of compilers, auto-detection of bibliography
+and index handling, (partial) font support for \XeLaTeX, etc.
+The compilations run in a hardened chroot environment.
+This \API\ has been in full time usage at arXiv for about a year with
+thousands of compilations daily.}

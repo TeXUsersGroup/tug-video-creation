@@ -1,0 +1,1 @@
+The talk will examine an existing framework for reasoning about 3D mathematical illustrations which are composed of triangles and line segments, as well as frame a pervasive issue through the lens of this framework. Specifically, we will investigate the principles of occlusion and partitioning, and we will observe the inadequacies of current tessellation theory.

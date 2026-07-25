@@ -1,0 +1,8 @@
+# Per-token YouTube title overrides (full title, <=100 chars).
+# Used verbatim by set-metadata.py / upload.py; one  token<TAB>title  per line.
+# These are the talks whose auto-built title exceeded YouTube's 100-char limit,
+# hand-shortened (author list and/or title) the way the 2024/2025 channel did.
+adhiyaman-structure	TUG 2026 — Prasad Adhiyaman, et al — Inferring logical structure of a scientific paper
+erickson-accessibility	TUG 2026 — Timothy Erickson, Aarush Bhat — Visual impairment meets mathematics
+krishnan-tables	TUG 2026 — Rahul Krishnan S, et al — The pursuit of professional and accessible tables in LaTeX
+temple-nasa	TUG 2026 — River Temple — From neurons to NASA: A brief tour of the brain, font psychology

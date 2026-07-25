@@ -1,0 +1,5 @@
+The world's best established software system for typesetting and document formatting, LaTeX has been popular throughout the mathematical and physical sciences for decades. LaTeX's utility for scholars in humanities disciplines, however, tends to be overlooked.
+
+In this tutorial, attendees will be introduced to the use of LaTeX for a common task in humanities scholarship, namely, typesetting texts with unusual line length and other organizational needs, such as poetry and translations. The specific example will be preparing a handout for a historical conference or class presentation with perfectly organized excerpts of ancient texts and parallel English translations. Specifically, I will walk attendees in sequence through setup, formatting, and, finally, viewing a document of this kind—talking about different approaches that one might take depending on needs, such as placing right-to-left (notably, Semitic) and left-to-right languages side-by-side.
+
+I aim to inspire attendees to think about LaTeX as a highly flexible tool with a wider range of professional applications than it is often understood as having.

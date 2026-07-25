@@ -1,0 +1,11 @@
+{John Lienhard}
+{Modernizing \acro{MIT}'s thesis template: \texttt{mitthesis.cls}}
+{A few years ago, I began an update to \acro{MIT}'s \LaTeX\ template for theses
+and dissertations. The previous template had been written in \LaTeX~2.09
+in the 1980s and patched for \LaTeXe\ by various students during the
+1990s. My work quickly turned into a complete rewrite. My goals were to
+use current \LaTeX\ methods and to produce tagged \PDF, while still
+supporting users who have minimal knowledge of \LaTeX\ and typesetting. In
+this talk, I will discuss some of the considerations that shaped the
+current template.
+}
