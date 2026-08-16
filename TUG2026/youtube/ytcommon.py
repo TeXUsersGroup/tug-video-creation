@@ -127,9 +127,16 @@ def get_service():
     if os.path.exists(TOKEN):
         creds = Credentials.from_authorized_user_file(TOKEN, SCOPES)
     if not creds or not creds.valid:
+        refreshed = False
         if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
+            try:
+                creds.refresh(Request())
+                refreshed = True
+            except Exception:
+                # Testing-mode tokens expire ~7 days; a stale refresh token
+                # gives invalid_grant. Drop it and re-authorize interactively.
+                creds = None
+        if not refreshed and not creds:
             if not os.path.exists(SECRET):
                 sys.exit(f"Missing {SECRET} -- create an OAuth Desktop client "
                          f"(see README.md) and save it there.")
